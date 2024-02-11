@@ -1,8 +1,19 @@
+using FlowcentricAssessment.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AppDBContext>(option =>
+{
+  option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
-builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddMvc().AddXmlSerializerFormatters(); ;
+builder.Services.AddControllers().AddXmlDataContractSerializerFormatters();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,5 +32,22 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+ApplyMigration();
 
 app.Run();
+
+
+
+//Data migration
+void ApplyMigration()
+{
+  using (var scope = app.Services.CreateScope())
+  {
+    var _db = scope.ServiceProvider.GetRequiredService<AppDBContext>();
+
+    if (_db.Database.GetPendingMigrations().Any())
+    {
+      _db.Database.Migrate();
+    }
+  }
+}
