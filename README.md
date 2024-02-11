@@ -22,3 +22,12 @@ Example:
 
 database Migrations should automatically create tables from data structure .
 
+
+## Appendix
+
+Custom Setting not importing 
+ - Classes added 
+ - Method added with comments 
+ 
+ Hope fully the rest of the code will give a good understanding of my thought process with this assessement
+
