@@ -26,7 +26,7 @@ namespace FlowcentricAssessment.Models
 
   public class CustomSettingsBool : CustomSettings //Boolean
   {
-    public string? boolValue { get; set; }  //Splitting string int and bool values here nullable for DB 
+    public bool? boolValue { get; set; }  //Splitting string int and bool values here nullable for DB 
 
   }
 }

@@ -11,7 +11,7 @@ namespace FlowcentricAssessment.Models
     [Required]
     public string Company { get; set; }
     [Required]
-    public Guid License { get; set; }
+    public string License { get; set; }
     [Required]
     public string ServerAddress { get; set; } //DO URL Validation
     [Required]
