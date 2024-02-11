@@ -18,5 +18,6 @@ namespace FlowcentricAssessment.Models
     public int LoginAttemptLimit { get; set; }
     [Required]
     public int PasswordHistory { get; set; }
+    public List<ClientSettings> ClientSettings { get; set; } //link to client Settings // Not sure if this is one to many ? i left it at 1 to many easy enough to change if need be just change the prop list <ClientSettings> will effect FK 
   }
 }

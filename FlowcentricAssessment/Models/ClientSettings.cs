@@ -35,5 +35,8 @@ namespace FlowcentricAssessment.Models
     public bool EnableFeature5 { get; set; }
     [Required]
     public bool DisplayFullError { get; set; }
+
+    public List<CustomSettings> CustomSettings { get; set; } //Link to product Settings
+
   }
 }
