@@ -1,0 +1,6 @@
+@FlowcentricAssessment_HostAddress = http://localhost:5070
+
+GET {{FlowcentricAssessment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
