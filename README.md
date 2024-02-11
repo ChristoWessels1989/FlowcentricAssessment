@@ -1,13 +1,10 @@
 # Flowcentric Assessment
 
-Project caters for importing on XML config file and saving it to SQL Database
+Project caters for importing of XML config file and saving it to SQL Database
 
 ## Web API
 
  - The api contains 1 controller for importing of config file that accepts a XML body 
-
-
-
   
 ## Deployment
 
