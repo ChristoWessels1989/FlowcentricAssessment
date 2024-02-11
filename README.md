@@ -29,5 +29,13 @@ Custom Setting not importing
  - Classes added 
  - Method added with comments 
  
- Hope fully the rest of the code will give a good understanding of my thought process with this assessement
+ Hopefully the rest of the code will give a good understanding of my thought process with this assessement
+
+
+## Notes
+
+Just some notes 
+- did not follow any code commiting standards (this is usually company specific) Example : story number - What changed etc
+- code is in C# using code first with entity framework core for database migrations 
+
 
